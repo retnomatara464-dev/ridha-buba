@@ -1,0 +1,192 @@
+/* Pengaturan Dasar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    scroll-behavior: smooth; /* Untuk scroll navigasi yang mulus */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.dark-bg {
+    background: #2c3e50;
+    color: white;
+}
+
+/* Header & Navigasi */
+header {
+    background: #3498db;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding-bottom: 3px;
+    transition: border-bottom 0.3s;
+}
+
+nav a:hover {
+    border-bottom: 2px solid white;
+}
+
+.menu-toggle {
+    display: none; /* Sembunyikan tombol di desktop */
+}
+
+/* Hero Section */
+.hero {
+    background: url('latar-belakang-anda.jpg') no-repeat center center/cover; /* Ganti dengan gambar latar Anda */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: #333; /* Warna cadangan jika gambar tidak ada */
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.button-cta {
+    display: inline-block;
+    background: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.button-cta:hover {
+    background: #c0392b;
+}
+
+/* Keahlian Grid */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.skill-item {
+    background: white;
+    color: #333;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+/* Proyek Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Kontak */
+.contact-link {
+    font-size: 1.2em;
+    color: #2ecc71;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Media Queries untuk Responsif (Mobile) */
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    nav {
+        display: none; /* Sembunyikan nav di mobile secara default */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #3498db;
+        text-align: center;
+        padding: 10px 0;
+    }
+    nav.active {
+        display: flex; /* Tampilkan jika class 'active' ditambahkan oleh JS */
+    }
+    nav a {
+        margin: 10px 0;
+    }
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+    .container {
+        width: 90%;
+    }
+}
